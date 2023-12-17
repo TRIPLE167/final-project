@@ -1,0 +1,106 @@
+@use "../scssEbi/_whole" as *;
+header {
+  width: 100%;
+  height: 136px;
+  @include center;
+  nav {
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 35px;
+      color: $strangepurple;
+      span {
+        color: $lightred;
+      }
+    }
+    ul {
+      display: flex;
+      margin-left: 197px;
+      column-gap: 31.5px;
+      margin-right: 50px;
+      li {
+        a {
+          color: #13264e;
+          font-size: 20px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .input {
+      position: relative;
+      width: 188px;
+      height: 21px;
+      input {
+        width: 188px;
+        height: 21px;
+        border-radius: 40px;
+        padding-left: 11px;
+        background-color: #d9d9d980;
+        border: none;
+      }
+      i {
+        position: absolute;
+        font-size: 8px;
+        right: 8px;
+        top: 50%;
+        transform: translatey(-50%);
+      }
+    }
+  }
+}
+main {
+  .kendrick {
+    @include center;
+    background-image: url(../images/lamar.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    opacity: 80%;
+    p {
+      font-size: 30px;
+      color: purple;
+      width: 525px;
+      line-height: 40px;
+    }
+  }
+  .xazebi {
+    width: 100%;
+    @include center;
+    margin-top: 98px;
+    div {
+      width: 253px;
+      height: 0;
+      border: 1px solid black;
+    }
+    h1 {
+      font-family: "Kaisei Decol", serif;
+      font-size: 36px;
+      margin-inline: 13px;
+    }
+  }
+  .arrows {
+    margin-top: 102px;
+    width: 100%;
+    @include between;
+    .albums {
+      @include center;
+      div {
+        width: 310px;
+        height: 215px;
+        margin-top: 20px;
+        background-image: url(../images/vinyl.jpg);
+
+        img {
+          width: 143px;
+          height: 143px;
+          margin-left: 89px;
+          margin-top: 54px;
+          border: 5px solid gray;
+        }
+      }
+    }
+  }
+}
