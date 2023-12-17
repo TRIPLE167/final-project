@@ -1,17 +1,327 @@
-/* Error: Undefined mixin.
- *    ,
- * 87 |     @include between;
- *    |     ^^^^^^^^^^^^^^^^
- *    '
- *   mtavari.scss 87:5  root stylesheet */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Karla:wght@700&family=Roboto:ital,wght@0,500;1,700;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+  vertical-align: baseline;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 87 \2502      @include between;\d\a    \2502      ^^^^^^^^^^^^^^^^\a    \2575 \a   mtavari.scss 87:5  root stylesheet";
+}
+
+body {
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav h1 {
+  font-size: 35px;
+  color: #ab1d46;
+}
+header nav h1 span {
+  color: #ff4c30;
+}
+header nav ul {
+  display: flex;
+  margin-left: 197px;
+  column-gap: 31.5px;
+  margin-right: 50px;
+}
+header nav ul li a {
+  color: #13264e;
+  font-size: 20px;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header nav .input {
+  position: relative;
+  width: 188px;
+  height: 21px;
+}
+header nav .input input {
+  width: 188px;
+  height: 21px;
+  border-radius: 40px;
+  padding-left: 11px;
+  background-color: rgba(217, 217, 217, 0.5019607843);
+  border: none;
+  outline: none;
+}
+header nav .input i {
+  position: absolute;
+  font-size: 8px;
+  right: 8px;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+main .kendrick {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../images/lamar.webp);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  opacity: 80%;
+}
+main .kendrick p {
+  font-size: 30px;
+  color: purple;
+  width: 527px;
+  line-height: 40px;
+}
+main .kendrick button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 127px;
+  height: 48px;
+  background-color: rgba(78, 94, 57, 0.8980392157);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-top: 32px;
+}
+main .kendrick img {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translatey(-50%);
+}
+main .kendrick .circles {
+  display: flex;
+  gap: 14px;
+  position: absolute;
+  bottom: 60px;
+}
+main .kendrick .circles div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+}
+main .kendrick .circles div:nth-of-type(2) {
+  background-color: white;
+}
+main .xazebi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 98px;
+}
+main .xazebi div {
+  width: 253px;
+  height: 0;
+  border: 1px solid black;
+}
+main .xazebi h1 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 36px;
+  margin-inline: 13px;
+}
+main .arrows {
+  margin-top: 102px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .arrows img:first-of-type {
+  margin-left: 70px;
+}
+main .arrows img:last-of-type {
+  margin-right: 70px;
+}
+main .arrows .albums {
+  width: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Kaisei Decol", serif;
+}
+main .arrows .albums .damn p:first-of-type {
+  margin-top: 10px;
+  margin-left: 25%;
+}
+main .arrows .albums .damn p:last-of-type {
+  margin-top: 10px;
+  margin-left: 13%;
+}
+main .arrows .albums .morale p:first-of-type {
+  margin-top: 10px;
+  width: 137px;
+  margin-left: 12%;
+}
+main .arrows .albums .morale p:last-of-type {
+  margin-top: 10px;
+  margin-left: 15%;
+}
+main .arrows .albums .butterfly p:first-of-type {
+  margin-top: 10px;
+  margin-left: 7%;
+  width: 170px;
+}
+main .arrows .albums .butterfly p:last-of-type {
+  margin-top: 10px;
+  margin-left: 17%;
+}
+main .arrows .albums div {
+  width: 211px;
+  height: 140px;
+  background-image: url(../images/vinyl.jpg);
+}
+main .arrows .albums div img {
+  margin-left: 7px;
+  width: 125px;
+  height: 125px;
+  border: 5px solid gray;
+}
+main .butdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+main .butdiv button {
+  width: 150px;
+  height: 40px;
+  background-color: rgba(11, 37, 56, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
