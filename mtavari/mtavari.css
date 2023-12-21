@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Karla:wght@700&family=Roboto:ital,wght@0,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Kameron&family=Karla:wght@700&family=Karma&family=Kaushan+Script&family=Roboto:ital,wght@0,500;1,700;1,900&display=swap");
 html,
 body,
 div,
@@ -139,6 +139,21 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  header {
+    padding-inline: 15px;
+  }
+  header li,
+  header input,
+  header .input,
+  header img,
+  header .fa-solid {
+    display: none;
+  }
+  header img:nth-child(4) {
+    display: block;
+  }
+}
 header nav {
   display: flex;
   align-items: center;
@@ -184,6 +199,16 @@ header nav .input i {
   top: 50%;
   transform: translatey(-50%);
 }
+header nav nav img:last-of-type {
+  display: none;
+}
+header .cordination {
+  margin-left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 14px;
+}
 
 main .kendrick {
   position: relative;
@@ -197,6 +222,11 @@ main .kendrick {
   height: 700px;
   background-position: center;
   opacity: 80%;
+}
+@media (max-width: 768px) {
+  main .kendrick img {
+    display: none;
+  }
 }
 main .kendrick p {
   font-size: 30px;
@@ -249,10 +279,20 @@ main .xazebi div {
   height: 0;
   border: 1px solid black;
 }
+@media (max-width: 768px) {
+  main .xazebi div {
+    width: 90.5px;
+  }
+}
 main .xazebi h1 {
   font-family: "Kaisei Decol", serif;
   font-size: 36px;
   margin-inline: 13px;
+}
+@media (max-width: 768px) {
+  main .xazebi h1 {
+    font-size: 30px;
+  }
 }
 main .arrows {
   margin-top: 102px;
@@ -260,6 +300,14 @@ main .arrows {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  main .arrows .left {
+    display: none;
+  }
+  main .arrows .right {
+    display: none;
+  }
 }
 main .arrows img:first-of-type {
   margin-left: 70px;
@@ -270,35 +318,37 @@ main .arrows img:last-of-type {
 main .arrows .albums {
   width: 850px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 0 130px;
   font-family: "Kaisei Decol", serif;
 }
-main .arrows .albums .damn p:first-of-type {
-  margin-top: 10px;
-  margin-left: 25%;
+@media (max-width: 768px) {
+  main .arrows .albums {
+    flex-direction: column;
+    row-gap: 80px;
+  }
 }
-main .arrows .albums .damn p:last-of-type {
-  margin-top: 10px;
-  margin-left: 13%;
+main .arrows .albums p {
+  margin-top: 7px;
 }
-main .arrows .albums .morale p:first-of-type {
-  margin-top: 10px;
-  width: 137px;
-  margin-left: 12%;
+main .arrows .albums .damn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-main .arrows .albums .morale p:last-of-type {
-  margin-top: 10px;
-  margin-left: 15%;
+main .arrows .albums .morale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-main .arrows .albums .butterfly p:first-of-type {
-  margin-top: 10px;
-  margin-left: 7%;
-  width: 170px;
+main .arrows .albums .morale p {
+  width: 163px;
 }
-main .arrows .albums .butterfly p:last-of-type {
-  margin-top: 10px;
-  margin-left: 17%;
+main .arrows .albums .butterfly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main .arrows .albums div {
   width: 211px;
@@ -318,10 +368,214 @@ main .butdiv {
   margin-top: 150px;
 }
 main .butdiv button {
+  margin-bottom: 100px;
   width: 150px;
   height: 40px;
   background-color: rgba(11, 37, 56, 0.8);
   border: none;
   border-radius: 5px;
   color: white;
+}
+@media (max-width: 768px) {
+  main .butdiv button {
+    width: 240px;
+    height: 70px;
+    font-size: 22px;
+  }
+}
+main .concert {
+  width: 100%;
+  height: 700px;
+  background-image: url(../images/concert.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+main .concert p {
+  width: 407px;
+  margin-bottom: 40px;
+}
+main .concert button {
+  width: 241.446px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background: #19364a;
+  color: white;
+}
+main .blank {
+  font-family: "Karma", serif;
+  width: 100%;
+  height: 333px;
+  background-color: #273a47;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+main .blank p {
+  width: 1141px;
+}
+@media (max-width: 768px) {
+  main .blank p {
+    width: 650px;
+  }
+}
+
+footer {
+  width: 1295px;
+  height: 340px;
+  background: #e4e4e4;
+  padding-top: 40px;
+  padding-left: 54px;
+  display: flex;
+}
+@media (max-width: 768px) {
+  footer {
+    width: 714px;
+    flex-direction: column;
+  }
+}
+footer h1 {
+  font-size: 25px;
+  color: #ab1d46;
+}
+footer h1 span {
+  color: #ff4c30;
+}
+footer .leftfooter p {
+  font-family: "Kameron", serif;
+  margin-top: 13px;
+}
+footer .leftfooter ul {
+  display: flex;
+  flex-direction: column;
+  gap: 17px 0;
+  font-family: "Kameron", serif;
+  margin-top: 44px;
+}
+@media (max-width: 768px) {
+  footer .leftfooter ul {
+    display: none;
+  }
+}
+footer .leftfooter .contact {
+  display: flex;
+  column-gap: 20px;
+  margin-top: 29px;
+}
+footer .twofooter {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  footer .twofooter {
+    flex-direction: row;
+  }
+}
+footer .twofooter .midfooter {
+  column-gap: 150px;
+  display: flex;
+  margin-left: 200px;
+}
+@media (max-width: 768px) {
+  footer .twofooter .midfooter {
+    margin-left: 7px;
+    margin-top: 25px;
+    column-gap: 300px;
+  }
+}
+footer .twofooter .midfooter div {
+  width: 173.003px;
+}
+footer .twofooter .midfooter hr {
+  height: 1px;
+  background-color: black;
+}
+footer .twofooter .midfooter p {
+  font-family: "Kaushan Script", cursive;
+}
+footer .twofooter .midfooter ul {
+  font-family: "Kameron", serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+  margin-top: 12px;
+}
+footer .twofooter .bottomfooter {
+  margin-left: 340px;
+  margin-top: 95px;
+}
+footer .twofooter .bottomfooter div {
+  display: flex;
+}
+footer .twofooter .bottomfooter div input {
+  width: 339px;
+  height: 40px;
+  padding-left: 13px;
+  font-family: "Karma", serif;
+  border: 1px solid #000;
+  margin-right: 38px;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  footer .twofooter .bottomfooter div input {
+    display: none;
+  }
+}
+footer .twofooter .bottomfooter div input::placeholder {
+  color: black;
+  font-size: 20px;
+}
+footer .twofooter .bottomfooter div button {
+  width: 148px;
+  height: 40px;
+  font-family: "Karma", serif;
+  font-size: 15px;
+  color: white;
+  font-family: "Karma", serif;
+  background-color: #273a47;
+  border: none;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  footer .twofooter .bottomfooter div button {
+    display: none;
+  }
+}
+footer .twofooter .bottomfooter p {
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  margin-top: 11px;
+}
+@media (max-width: 768px) {
+  footer .twofooter .bottomfooter p {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  footer .wholefooter {
+    order: 1;
+  }
+}
+footer .social {
+  display: flex;
+  column-gap: 28px;
+  margin-right: 20px;
+}
+footer .social img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 768px) {
+  footer .social {
+    justify-content: end;
+  }
 }
