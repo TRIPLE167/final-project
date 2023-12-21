@@ -17,9 +17,6 @@ header {
     .fa-solid {
       display: none;
     }
-    img:nth-child(4) {
-      display: block;
-    }
   }
   nav {
     display: flex;
@@ -67,9 +64,10 @@ header {
         transform: translatey(-50%);
       }
     }
-    nav {
-      img:last-of-type {
-        display: none;
+    .lines {
+      display: none;
+      @include mobile{
+        display: block;
       }
     }
   }
@@ -275,12 +273,21 @@ main {
   }
 }
 footer {
-  width: 1295px;
+  width: 100%;
   height: 340px;
   background: #e4e4e4;
   padding-top: 40px;
   padding-left: 54px;
   display: flex;
+  .rightside {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+  }
+  .socialmid {
+    display: flex;
+    column-gap: 80px;
+  }
   @include mobile {
     width: 714px;
     flex-direction: column;
@@ -313,88 +320,79 @@ footer {
       margin-top: 29px;
     }
   }
-  .twofooter {
+  .midfooter {
+    column-gap: 150px;
     display: flex;
-    flex-direction: column;
     @include mobile {
-      flex-direction: row;
+      margin-left: 7px;
+      margin-top: 25px;
+      column-gap: 300px;
     }
-    .midfooter {
-      column-gap: 150px;
+    div {
+      width: 173.003px;
+    }
+    hr {
+      height: 1px;
+      background-color: black;
+    }
+    p {
+      font-family: "Kaushan Script", cursive;
+    }
+    ul {
+      font-family: "Kameron", serif;
       display: flex;
-      margin-left: 200px;
-      @include mobile {
-        margin-left: 7px;
-        margin-top: 25px;
-        column-gap: 300px;
-      }
-      div {
-        width: 173.003px;
-      }
-      hr {
-        height: 1px;
-        background-color: black;
-      }
-      p {
-        font-family: "Kaushan Script", cursive;
-      }
-      ul {
-        font-family: "Kameron", serif;
-        display: flex;
-        flex-direction: column;
-        row-gap: 17px;
-        margin-top: 12px;
-      }
+      flex-direction: column;
+      row-gap: 17px;
+      margin-top: 12px;
     }
-    .bottomfooter {
-      margin-left: 340px;
-      margin-top: 95px;
-      div {
-        display: flex;
-
-        input {
-          width: 339px;
-          height: 40px;
-          padding-left: 13px;
-          font-family: "Karma", serif;
-          border: 1px solid #000;
-          margin-right: 38px;
-          border-radius: 12px;
-          @include mobile {
-            display: none;
-          }
-          &::placeholder {
-            color: black;
-            font-size: 20px;
-          }
+  }
+  .bottomfooter {
+    margin-left: 200px;
+    margin-top: 95px;
+    div {
+      display: flex;
+      input {
+        width: 339px;
+        height: 40px;
+        padding-left: 13px;
+        font-family: "Karma", serif;
+        border: 1px solid #000;
+        margin-right: 38px;
+        border-radius: 12px;
+        @include mobile {
+          display: none;
         }
-        button {
-          width: 148px;
-          height: 40px;
-          font-family: "Karma", serif;
-          font-size: 15px;
-          color: white;
-          font-family: "Karma", serif;
-          background-color: #273a47;
-          border: none;
-          border-radius: 12px;
-          @include mobile {
-            display: none;
-          }
+        &::placeholder {
+          color: black;
+          font-size: 20px;
         }
       }
-      p {
-        font-family: "Karla", sans-serif;
-        font-size: 12px;
-        margin-top: 11px;
+      button {
+        width: 148px;
+        height: 40px;
+        font-family: "Karma", serif;
+        font-size: 15px;
+        color: white;
+        font-family: "Karma", serif;
+        background-color: #273a47;
+        border: none;
+        border-radius: 12px;
         @include mobile {
           display: none;
         }
       }
     }
+    p {
+      font-family: "Karla", sans-serif;
+      font-size: 12px;
+      margin-top: 11px;
+      @include mobile {
+        display: none;
+      }
+    }
   }
-  .wholefooter{
-    @include mobile{
+  .wholefooter {
+    @include mobile {
       order: 1;
     }
   }
@@ -407,7 +405,7 @@ footer {
       width: 30px;
       height: 30px;
     }
-    @include mobile{
+    @include mobile {
       justify-content: end;
     }
   }
