@@ -4,9 +4,18 @@
     @content;
   }
 }
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+   
+}
 header {
-  width: 100%;
+   
   height: 136px;
+   
+
   @include center;
   @include mobile {
     padding-inline: 15px;
@@ -19,8 +28,10 @@ header {
     }
   }
   nav {
+    width: 85%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     h1 {
       font-size: 35px;
       color: $strangepurple;
@@ -30,7 +41,6 @@ header {
     }
     ul {
       display: flex;
-      margin-left: 197px;
       column-gap: 31.5px;
       margin-right: 50px;
       li {
@@ -84,7 +94,7 @@ main {
     flex-direction: column;
     background-image: url(../images/lamar.webp);
     background-repeat: no-repeat;
-    width: 100%;
+   
     height: 700px;
     background-position: center;
     opacity: 80%;
@@ -98,6 +108,12 @@ main {
       color: purple;
       width: 527px;
       line-height: 40px;
+
+      @include mobile {
+        font-size: 26px;
+        width: 483px;
+        text-align: center
+      }
     }
     button {
       @include center;
@@ -155,7 +171,7 @@ main {
   }
   .arrows {
     margin-top: 102px;
-    width: 100%;
+    width: 90.2%;
     @include between;
     @include mobile {
       .left {
@@ -164,17 +180,19 @@ main {
       .right {
         display: none;
       }
+      justify-content: center;
     }
-    img:first-of-type {
-      margin-left: 70px;
-    }
-    img:last-of-type {
-      margin-right: 70px;
-    }
+     
     .albums {
-      width: 850px;
-      @include center;
-      gap: 0 130px;
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+       
+      @include mobile {
+        justify-content: center;
+        width: 211px;
+      }
+
       font-family: "Kaisei Decol", serif;
       @include mobile {
         flex-direction: column;
@@ -262,36 +280,88 @@ main {
     background-color: #273a47;
     font-size: 22px;
     @include center;
+    display: flex;
     flex-direction: column;
     color: white;
+
+    @include mobile {
+      justify-content: center;
+    }
     p {
       width: 1141px;
       @include mobile {
-        width: 650px;
+        width: 471px;
+        text-align: center;
       }
     }
   }
 }
 footer {
-  width: 100%;
-  height: 340px;
-  background: #e4e4e4;
-  padding-top: 40px;
-  padding-left: 54px;
+  position: relative;
+  margin: 0;
+  padding: 40px;
+  background-color: #e4e4e4;
   display: flex;
-  .rightside {
+  justify-content: space-between;
+
+  .contact {
     display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+    gap: 20px;
+ }
+
+  .leftside{
+    width:58.2%;
+    height: 382px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile{
+      flex-direction: column;
+      height: 250px;
+    }
+    .support{
+      padding-top: 61px;
+
+      hr {
+        height: 1px;
+        background-color: black;
+        width: 155px;
+        
+        @include mobile {
+          margin-left: 0;
+        }
+      }
+      p {
+        font-family: "Kaushan Script", cursive;
+      }
+      ul {
+        font-family: "Kameron", serif;
+        display: flex;
+        flex-direction: column;
+        row-gap: 17px;
+        margin-top: 12px;
+      }
+    }
+  }
+  .rightside {
+    width: 30.2%;
+    height: 382px;
+     
   }
   .socialmid {
-    display: flex;
-    column-gap: 80px;
+    display:flex;
+    height: 382px;
+    
+    
+    
+    @include mobile{
+      height: 250px;
+      flex-direction: column-reverse;
+      
+      justify-content: space-between;
+    }
   }
-  @include mobile {
-    width: 714px;
-    flex-direction: column;
-  }
+ 
   h1 {
     font-size: 25px;
     color: $strangepurple;
@@ -300,6 +370,7 @@ footer {
     }
   }
   .leftfooter {
+     
     p {
       font-family: "Kameron", serif;
       margin-top: 13px;
@@ -314,22 +385,16 @@ footer {
         display: none;
       }
     }
-    .contact {
-      display: flex;
-      column-gap: 20px;
-      margin-top: 29px;
-    }
+   
   }
   .midfooter {
-    column-gap: 150px;
+    
+    justify-content: space-between;
     display: flex;
-    @include mobile {
-      margin-left: 7px;
-      margin-top: 25px;
-      column-gap: 300px;
-    }
+    padding-top: 61px;
+
     div {
-      width: 173.003px;
+      width: 130.003px;
     }
     hr {
       height: 1px;
@@ -391,22 +456,23 @@ footer {
       }
     }
   }
-  .wholefooter {
-    @include mobile {
-      order: 1;
-    }
-  }
+
   .social {
     display: flex;
-    column-gap: 28px;
-    margin-right: 20px;
+    gap: 20px;
+    justify-content: space-between;
+     
+
+    @include mobile{
+      margin: 0;
+      justify-content: flex-end;
+      
+    }
 
     img {
       width: 30px;
       height: 30px;
     }
-    @include mobile {
-      justify-content: end;
-    }
+
   }
 }
