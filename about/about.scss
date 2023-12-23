@@ -4,11 +4,13 @@
     @content;
   }
 }
+
 header {
   width: 100%;
   height: 136px;
   @include center;
   @include mobile {
+    padding-inline: 15px;
     li,
     input,
     .input,
@@ -21,8 +23,8 @@ header {
     }
   }
   nav {
-    @include between;
-
+    display: flex;
+    align-items: center;
     h1 {
       font-size: 35px;
       color: $strangepurple;
@@ -66,12 +68,14 @@ header {
         transform: translatey(-50%);
       }
     }
+    nav {
+      img:last-of-type {
+        display: none;
+      }
+    }
   }
   .cordination {
     margin-left: 70px;
-    @include mobile {
-      margin: 0;
-    }
     @include center;
     gap: 0 14px;
     .lines {
@@ -83,59 +87,12 @@ header {
   }
 }
 main {
-  .kendrick {
-    position: relative;
+  .photo {
+    height: 612px;
+    background-image: url(../images/teraphy.webp);
     @include center;
-    flex-direction: column;
-    background-image: url(../images/lamar.webp);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 700px;
-    background-position: center;
-    opacity: 80%;
-    @include mobile {
-      img {
-        display: none;
-      }
-    }
-    p {
-      font-size: 30px;
-      color: purple;
-      width: 527px;
-      line-height: 40px;
-    }
-    button {
-      @include center;
-      width: 127px;
-      height: 48px;
-      background-color: #4e5e39e5;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      margin-top: 32px;
-    }
-
-    img {
-      position: absolute;
-      right: 80px;
-      top: 50%;
-      transform: translatey(-50%);
-    }
-    .circles {
-      display: flex;
-      gap: 14px;
-      position: absolute;
-      bottom: 60px;
-      div {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: black;
-      }
-      div:nth-of-type(2) {
-        background-color: white;
-      }
-    }
+    font-size: 75px;
+    color: white;
   }
   .xazebi {
     width: 100%;
@@ -158,127 +115,115 @@ main {
       }
     }
   }
-  .arrows {
-    margin-top: 102px;
-    width: 100%;
-    @include between;
+  .mid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 133px;
+    font-family: "Kaisei Decol", serif;
+
     @include mobile {
-      .left {
-        display: none;
-      }
-      .right {
-        display: none;
-      }
+      flex-direction: column;
+      row-gap: 80px;
     }
-    img:first-of-type {
-      margin-left: 70px;
-    }
-    img:last-of-type {
-      margin-right: 70px;
-    }
-    .albums {
-      width: 850px;
+    .circle {
+      width: 192px;
+      height: 192px;
+      background-color: #273a47;
+      border-radius: 50%;
       @include center;
-      gap: 0 130px;
-      font-family: "Kaisei Decol", serif;
-      @include mobile {
-        flex-direction: column;
-        row-gap: 80px;
+      color: white;
+      font-size: 36px;
+    }
+    P {
+      font-size: 24px;
+      margin-top: 32px;
+    }
+    .first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      P {
+        width: 332px;
+
+        @include mobile {
+          width: 245px;
+        }
+      }
+    }
+    .second {
+      @extend .first;
+      p {
+        width: 436px;
+
+        @include mobile {
+          width: 314px;
+        }
+      }
+    }
+    .third {
+      @extend .first;
+      p {
+        width: 356px;
+      }
+    }
+  }
+  .photo2 {
+    background-image: url(../images/albums.jpg);
+    height: 700px;
+    margin-top: 150px;
+    position: relative;
+    .aboutus {
+      width: 50%;
+      height: 100%;
+      @include center;
+      flex-direction: column;
+      color: white;
+      font-family: "Kadwa", serif;
+      background: rgba(0, 0, 0, 0.5);
+      
+      div {
+        @include mobile {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include center;
+          flex-direction: column;
+
+        }
+      }
+
+      h1 {
+        font-size: 30px;
+
+        @include mobile{
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+      }
+      h2{
+        font-size: 24px;
+        display: none;
+        @include mobile{
+          display: block;
+        }
       }
       p {
-        margin-top: 7px;
-      }
-      .damn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .morale {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        p {
-          width: 163px;
+        font-size: 20px;
+        max-width: 491px;
+        line-height: normal;
+        margin-top: 69px;
+
+        @include mobile {
+          display: none;
         }
-      }
-      .butterfly {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      div {
-        width: 211px;
-        height: 140px;
-        background-image: url(../images/vinyl.jpg);
-        img {
-          margin-left: 7px;
-          width: 125px;
-          height: 125px;
-          border: 5px solid gray;
-        }
-      }
-    }
-  }
-  .butdiv {
-    @include center;
-    margin-top: 150px;
-    button {
-      margin-bottom: 100px;
-      width: 150px;
-      height: 40px;
-      background-color: #0b2538cc;
-      border: none;
-      border-radius: 5px;
-      color: white;
-      @include mobile {
-        width: 240px;
-        height: 70px;
-        font-size: 22px;
-      }
-    }
-  }
-  .concert {
-    width: 100%;
-    height: 700px;
-    background-image: url(../images/concert.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 48px;
-    @include center;
-    flex-direction: column;
-    color: white;
-    p {
-      width: 407px;
-      margin-bottom: 40px;
-    }
-    button {
-      width: 241.446px;
-      height: 60px;
-      border-radius: 5px;
-      border: none;
-      background: #19364a;
-      color: white;
-    }
-  }
-  .blank {
-    font-family: "Karma", serif;
-    width: 100%;
-    height: 333px;
-    background-color: #273a47;
-    font-size: 22px;
-    @include center;
-    flex-direction: column;
-    color: white;
-    p {
-      width: 1141px;
-      @include mobile {
-        width: 650px;
       }
     }
   }
 }
 footer {
   .wholefooter {
+    margin-top: 100px;
     flex-direction: column;
     background-color: #e4e4e4;
     padding: 40px 40px 26px 40px;
@@ -291,9 +236,9 @@ footer {
         width: 58.2%;
         display: flex;
         justify-content: space-between;
-        
-        @include mobile{
-          flex-direction: column;  
+
+        @include mobile {
+          flex-direction: column;
         }
         h1 {
           font-size: 25px;
@@ -319,7 +264,7 @@ footer {
         .help {
           width: 173.003px;
 
-          @include mobile{
+          @include mobile {
             margin-left: 10px;
           }
           hr {
@@ -343,11 +288,11 @@ footer {
         justify-content: space-between;
         width: 30.2%;
 
-        @include mobile{
+        @include mobile {
           flex-direction: column-reverse;
         }
 
-        .social{
+        .social {
           text-align: end;
         }
         .contact {
@@ -371,7 +316,7 @@ footer {
       }
     }
     .bottomfooter {
-      display:  flex;
+      display: flex;
       justify-content: space-between;
 
       width: 88.3%;
@@ -379,7 +324,7 @@ footer {
         display: flex;
         column-gap: 20px;
         margin-top: 29px;
-        img{
+        img {
           width: 24px;
           height: 24px;
         }

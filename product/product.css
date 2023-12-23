@@ -140,6 +140,9 @@ header {
   align-items: center;
 }
 @media (max-width: 768px) {
+  header {
+    padding-inline: 15px;
+  }
   header li,
   header input,
   header .input,
@@ -154,7 +157,6 @@ header {
 header nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 header nav h1 {
   font-size: 35px;
@@ -197,17 +199,15 @@ header nav .input i {
   top: 50%;
   transform: translatey(-50%);
 }
+header nav nav img:last-of-type {
+  display: none;
+}
 header .cordination {
   margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 14px;
-}
-@media (max-width: 768px) {
-  header .cordination {
-    margin: 0;
-  }
 }
 header .cordination .lines {
   display: none;
@@ -218,62 +218,26 @@ header .cordination .lines {
   }
 }
 
-main .kendrick {
-  position: relative;
+main .photo {
+  width: 100%;
+  background-image: url(../images/clothes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-image: url(../images/lamar.webp);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 700px;
-  background-position: center;
   opacity: 80%;
 }
+main .photo p {
+  color: #ab1d46;
+  opacity: 100%;
+  font-size: 70px;
+}
 @media (max-width: 768px) {
-  main .kendrick img {
-    display: none;
+  main .photo p {
+    font-size: 50px;
   }
-}
-main .kendrick p {
-  font-size: 30px;
-  color: purple;
-  width: 527px;
-  line-height: 40px;
-}
-main .kendrick button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 127px;
-  height: 48px;
-  background-color: rgba(78, 94, 57, 0.8980392157);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  margin-top: 32px;
-}
-main .kendrick img {
-  position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translatey(-50%);
-}
-main .kendrick .circles {
-  display: flex;
-  gap: 14px;
-  position: absolute;
-  bottom: 60px;
-}
-main .kendrick .circles div {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: black;
-}
-main .kendrick .circles div:nth-of-type(2) {
-  background-color: white;
 }
 main .xazebi {
   width: 100%;
@@ -302,142 +266,97 @@ main .xazebi h1 {
     font-size: 30px;
   }
 }
-main .arrows {
-  margin-top: 102px;
-  width: 100%;
+main .everymerch {
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+}
+main .everymerch .merch {
+  column-gap: 45px;
+  margin-top: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  main .everymerch .merch {
+    flex-direction: column;
+    row-gap: 100px;
+  }
+}
+main .everymerch .merch .shop {
+  font-family: "Karma", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .everymerch .merch .shop > img {
+  width: 324px;
+  height: 324px;
+  border-radius: 12px;
+}
+main .everymerch .merch .shop h3 {
+  font-size: 23px;
+  margin: 34px 0 24px;
+}
+main .everymerch .merch .shop p {
+  font-size: 23px;
+}
+main .everymerch .merch .shop .quantity {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  box-sizing: border-box;
+  padding-inline: 25px;
+  width: 324px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+main .everymerch .merch .shop button {
+  font-size: 21px;
+  color: white;
+  width: 324px;
+  height: 55px;
+  background-color: #24253c;
+  border-radius: 20px;
+  border: none;
 }
 @media (max-width: 768px) {
-  main .arrows .left {
-    display: none;
-  }
-  main .arrows .right {
+  main .everymerch .merch:nth-of-type(2) {
     display: none;
   }
 }
-main .arrows img:first-of-type {
-  margin-left: 70px;
+@media (max-width: 768px) {
+  main .everymerch .merch:last-of-type {
+    display: none;
+  }
 }
-main .arrows img:last-of-type {
-  margin-right: 70px;
-}
-main .arrows .albums {
-  width: 850px;
+main .numbers {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 130px;
-  font-family: "Kaisei Decol", serif;
+  margin-top: 100px;
+  column-gap: 8px;
 }
-@media (max-width: 768px) {
-  main .arrows .albums {
-    flex-direction: column;
-    row-gap: 80px;
-  }
+main .numbers div:first-of-type {
+  background-color: #d9d9d9;
 }
-main .arrows .albums p {
-  margin-top: 7px;
-}
-main .arrows .albums .damn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .arrows .albums .morale {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .arrows .albums .morale p {
-  width: 163px;
-}
-main .arrows .albums .butterfly {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .arrows .albums div {
-  width: 211px;
-  height: 140px;
-  background-image: url(../images/vinyl.jpg);
-}
-main .arrows .albums div img {
-  margin-left: 7px;
-  width: 125px;
-  height: 125px;
-  border: 5px solid gray;
-}
-main .butdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-}
-main .butdiv button {
-  margin-bottom: 100px;
-  width: 150px;
+main .numbers div {
+  font-size: 20px;
+  width: 40px;
   height: 40px;
-  background-color: rgba(11, 37, 56, 0.8);
-  border: none;
-  border-radius: 5px;
-  color: white;
-}
-@media (max-width: 768px) {
-  main .butdiv button {
-    width: 240px;
-    height: 70px;
-    font-size: 22px;
-  }
-}
-main .concert {
-  width: 100%;
-  height: 700px;
-  background-image: url(../images/concert.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-size: 48px;
+  background: rgba(217, 217, 217, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  color: white;
-}
-main .concert p {
-  width: 407px;
-  margin-bottom: 40px;
-}
-main .concert button {
-  width: 241.446px;
-  height: 60px;
-  border-radius: 5px;
-  border: none;
-  background: #19364a;
-  color: white;
-}
-main .blank {
-  font-family: "Karma", serif;
-  width: 100%;
-  height: 333px;
-  background-color: #273a47;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-}
-main .blank p {
-  width: 1141px;
-}
-@media (max-width: 768px) {
-  main .blank p {
-    width: 650px;
-  }
 }
 
 footer .wholefooter {
+  margin-top: 100px;
   flex-direction: column;
   background-color: #e4e4e4;
   padding: 40px 40px 26px 40px;
