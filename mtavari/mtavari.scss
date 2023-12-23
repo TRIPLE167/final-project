@@ -4,9 +4,18 @@
     @content;
   }
 }
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+   
+}
 header {
-  width: 100%;
+   
   height: 136px;
+   
+
   @include center;
   @include mobile {
     li,
@@ -15,9 +24,6 @@ header {
     img,
     .fa-solid {
       display: none;
-    }
-    img:nth-child(4) {
-      display: block;
     }
   }
   nav {
@@ -32,7 +38,6 @@ header {
     }
     ul {
       display: flex;
-      margin-left: 197px;
       column-gap: 31.5px;
       margin-right: 50px;
       li {
@@ -89,7 +94,7 @@ main {
     flex-direction: column;
     background-image: url(../images/lamar.webp);
     background-repeat: no-repeat;
-    width: 100%;
+   
     height: 700px;
     background-position: center;
     opacity: 80%;
@@ -103,6 +108,12 @@ main {
       color: purple;
       width: 527px;
       line-height: 40px;
+
+      @include mobile {
+        font-size: 26px;
+        width: 483px;
+        text-align: center
+      }
     }
     button {
       @include center;
@@ -160,7 +171,7 @@ main {
   }
   .arrows {
     margin-top: 102px;
-    width: 100%;
+    width: 90.2%;
     @include between;
     @include mobile {
       .left {
@@ -169,17 +180,19 @@ main {
       .right {
         display: none;
       }
+      justify-content: center;
     }
-    img:first-of-type {
-      margin-left: 70px;
-    }
-    img:last-of-type {
-      margin-right: 70px;
-    }
+     
     .albums {
-      width: 850px;
-      @include center;
-      gap: 0 130px;
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+       
+      @include mobile {
+        justify-content: center;
+        width: 211px;
+      }
+
       font-family: "Kaisei Decol", serif;
       @include mobile {
         flex-direction: column;
@@ -267,12 +280,18 @@ main {
     background-color: #273a47;
     font-size: 22px;
     @include center;
+    display: flex;
     flex-direction: column;
     color: white;
+
+    @include mobile {
+      justify-content: center;
+    }
     p {
       width: 1141px;
       @include mobile {
-        width: 650px;
+        width: 471px;
+        text-align: center;
       }
     }
   }
