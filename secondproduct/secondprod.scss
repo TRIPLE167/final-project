@@ -156,8 +156,8 @@ header {
   }
 }
 main {
+  margin-bottom: 100px;
   .photo {
-    width: 100%;
     background-image: url(../images/clothes.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,104 +174,95 @@ main {
       }
     }
   }
-  .xazebi {
-    width: 100%;
-    @include center;
-    margin-top: 98px;
-    div {
-      width: 253px;
-      height: 0;
-      border: 1px solid black;
-      @include mobile {
-        width: 90.5px;
-      }
-    }
-    h1 {
-      font-family: "Kaisei Decol", serif;
-      font-size: 36px;
-      margin-inline: 13px;
-      @include mobile {
-        font-size: 30px;
-      }
-    }
+  .P-ebi {
+    font-family: "Karma", serif;
+    font-weight: 700;
+    @include between;
+    padding: 0 90px 0 83px;
+    margin-top: 107px;
   }
-  .everymerch {
+
+  .product {
+    padding: 0 102px 0 82px;
+    margin-top: 118px;
     display: flex;
-    flex-direction: column;
-    row-gap: 150px;
-    .merch {
-      column-gap: 45px;
-      margin-top: 82px;
-      @include center;
-      @include mobile {
-        flex-direction: column;
-        row-gap: 100px;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+    .leftmain {
+      display: flex;
+      flex-direction: column;
+      .hoodie {
+        width: 100%;
+        height: 555px;
+        margin-top: 0;
       }
-      .shop {
-        font-family: "Karma", serif;
-        @include center;
-        flex-direction: column;
-        a {
-          img {
-            width: 324px;
-            height: 324px;
-            border-radius: 12px;
-          }
+      div {
+        width: 65%;
+        margin-top: 39px;
+        @include between;
+
+        @include mobile {
+          width: 100%;
         }
 
-        h3 {
-          font-size: 23px;
-          margin: 34px 0 24px;
+        img {
+          width: 149px;
+          height: 158px;
         }
-        p {
-          font-size: 23px;
+      }
+    }
+    .rightmain {
+      @include mobile {
+        @include center;
+        flex-direction: column;
+        margin-top: 60px;
+      }
+      h1 {
+        font-size: 64px;
+        font-family: "Metal", serif;
+      }
+      h3 {
+        font-size: 40px;
+        font-family: "Karma", serif;
+        margin: 30px 0 27px 0;
+      }
+      p {
+        font-family: "Kameron", serif;
+        max-width: 461px;
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .ertidiv {
+        width: 131px;
+        height: 66px;
+        border-radius: 5px;
+        border: 1px solid black;
+        @include center;
+        font-size: 35px;
+        P {
+          margin: 0;
         }
-        .quantity {
-          margin-top: 21px;
-          margin-bottom: 21px;
-          box-sizing: border-box;
-          padding-inline: 25px;
-          width: 324px;
-          height: 55px;
-          @include between;
-          border: 1px solid gray;
-          border-radius: 5px;
-        }
+      }
+      .heart {
+        margin-top: 50px;
+        @include between;
+        width: 385px;
         button {
-          font-size: 21px;
           color: white;
           width: 324px;
           height: 55px;
           background-color: #24253c;
           border-radius: 20px;
           border: none;
+          font-size: 33px;
+        }
+        i {
+          font-size: 40px;
         }
       }
-    }
-    .merch:nth-of-type(2) {
-      @include mobile {
-        display: none;
-      }
-    }
-    .merch:last-of-type {
-      @include mobile {
-        display: none;
-      }
-    }
-  }
-  .numbers {
-    @include center;
-    margin-top: 100px;
-    column-gap: 8px;
-    div:first-of-type {
-      background-color: #d9d9d9;
-    }
-    div {
-      font-size: 20px;
-      width: 40px;
-      height: 40px;
-      background: rgba(217, 217, 217, 0.5);
-      @include center;
     }
   }
 }

@@ -4,27 +4,37 @@
     @content;
   }
 }
-
+@keyframes animacia {
+  from {
+    right: -150px;
+  }
+  to {
+    right: 0;
+  }
+}
 header {
-  width: 100%;
   height: 136px;
+  display: flex;
+  align-items: center;
   @include center;
   @include mobile {
-    padding-inline: 15px;
+    position: relative;
+    width: 90%;
+    padding-left: 40px;
+    @include between;
     li,
     input,
-    .input,
     img,
     .fa-solid {
       display: none;
     }
-    img:nth-child(4) {
-      display: block;
-    }
   }
-  nav {
-    display: flex;
-    align-items: center;
+  .leftheader {
+    width: 63.3%;
+    @include between;
+    @include mobile {
+      width: 228px;
+    }
     h1 {
       font-size: 35px;
       color: $strangepurple;
@@ -34,7 +44,6 @@ header {
     }
     ul {
       display: flex;
-      margin-left: 197px;
       column-gap: 31.5px;
       margin-right: 50px;
       li {
@@ -47,37 +56,98 @@ header {
         }
       }
     }
-    .input {
-      position: relative;
-      width: 188px;
-      height: 21px;
-      input {
+  }
+  .rightheader {
+    @include between;
+    width: 27.9%;
+    @include mobile {
+      width: 16px;
+    }
+    .inputandstuff {
+      display: flex;
+      align-items: center;
+
+      .input {
+        position: relative;
         width: 188px;
         height: 21px;
-        border-radius: 40px;
-        padding-left: 11px;
-        background-color: #d9d9d980;
-        border: none;
-        outline: none;
-      }
-      i {
-        position: absolute;
-        font-size: 8px;
-        right: 8px;
-        top: 50%;
-        transform: translatey(-50%);
-      }
-    }
-    nav {
-      img:last-of-type {
-        display: none;
+        @include mobile {
+          display: none;
+        }
+        input {
+          width: 188px;
+          height: 21px;
+          border-radius: 40px;
+          padding-left: 11px;
+          background-color: #d9d9d980;
+          border: none;
+          outline: none;
+        }
+        i {
+          position: absolute;
+          font-size: 8px;
+          right: 8px;
+          top: 50%;
+          transform: translatey(-50%);
+        }
       }
     }
   }
   .cordination {
-    margin-left: 70px;
     @include center;
     gap: 0 14px;
+
+    .mobilemenu {
+      label {
+        cursor: pointer;
+      }
+      #menu {
+        display: none;
+      }
+      #menu:checked ~ div {
+        @include center;
+        flex-direction: column;
+        row-gap: 10px;
+        animation: animacia 0.7s;
+        right: 0;
+      }
+
+      .telephonenav {
+        display: none;
+        @include mobile {
+          position: absolute;
+          right: -140px;
+          margin-top: 10px;
+          width: 320px;
+          height: 250px;
+          background-color: rgb(196, 192, 192);
+          display: none;
+          border-radius: 20px;
+          z-index: 1;
+        }
+        div {
+          display: none;
+          @include mobile {
+            display: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            cursor: pointer;
+            @include center;
+            &:hover {
+              background-color: rgb(173, 171, 171);
+            }
+          }
+
+          a {
+            @include mobile {
+              color: #465577;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
     .lines {
       display: none;
       @include mobile {
@@ -143,7 +213,7 @@ main {
       flex-direction: column;
       align-items: center;
       P {
-        width: 332px;
+        max-width: 332px;
 
         @include mobile {
           width: 245px;
@@ -153,7 +223,7 @@ main {
     .second {
       @extend .first;
       p {
-        width: 436px;
+        max-width: 436px;
 
         @include mobile {
           width: 314px;
@@ -163,7 +233,7 @@ main {
     .third {
       @extend .first;
       p {
-        width: 356px;
+        max-width: 356px;
       }
     }
   }
@@ -180,7 +250,7 @@ main {
       color: white;
       font-family: "Kadwa", serif;
       background: rgba(0, 0, 0, 0.5);
-      
+
       div {
         @include mobile {
           position: absolute;
@@ -189,22 +259,21 @@ main {
           transform: translate(-50%, -50%);
           @include center;
           flex-direction: column;
-
         }
       }
 
       h1 {
         font-size: 30px;
 
-        @include mobile{
+        @include mobile {
           font-size: 50px;
           margin-bottom: 20px;
         }
       }
-      h2{
+      h2 {
         font-size: 24px;
         display: none;
-        @include mobile{
+        @include mobile {
           display: block;
         }
       }

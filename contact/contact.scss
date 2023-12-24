@@ -156,128 +156,43 @@ header {
   }
 }
 main {
-  .photo {
-    width: 100%;
-    background-image: url(../images/clothes.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    @include center;
-    opacity: 80%;
-
-    p {
-      color: $strangepurple;
-      opacity: 100%;
-      font-size: 70px;
-      @include mobile {
-        font-size: 50px;
-      }
-    }
+  background-color: #d6d4d4;
+  height: 535px;
+  @include between;
+  padding-left: 40px;
+  margin-bottom: 100px;
+  @include mobile {
+    flex-direction: column;
+    padding: 40px 0 0 0;
   }
-  .xazebi {
-    width: 100%;
-    @include center;
-    margin-top: 98px;
-    div {
-      width: 253px;
-      height: 0;
-      border: 1px solid black;
-      @include mobile {
-        width: 90.5px;
-      }
-    }
-    h1 {
-      font-family: "Kaisei Decol", serif;
-      font-size: 36px;
-      margin-inline: 13px;
-      @include mobile {
-        font-size: 30px;
-      }
-    }
-  }
-  .everymerch {
+  section {
     display: flex;
     flex-direction: column;
-    row-gap: 150px;
-    .merch {
-      column-gap: 45px;
-      margin-top: 82px;
-      @include center;
-      @include mobile {
-        flex-direction: column;
-        row-gap: 100px;
-      }
-      .shop {
-        font-family: "Karma", serif;
+    row-gap: 40px;
+    color: #3f4145;
+    font-family: "Karma", serif;
+    font-weight: 900;
+    @include mobile{
         @include center;
-        flex-direction: column;
-        a {
-          img {
-            width: 324px;
-            height: 324px;
-            border-radius: 12px;
-          }
-        }
-
-        h3 {
-          font-size: 23px;
-          margin: 34px 0 24px;
-        }
-        p {
-          font-size: 23px;
-        }
-        .quantity {
-          margin-top: 21px;
-          margin-bottom: 21px;
-          box-sizing: border-box;
-          padding-inline: 25px;
-          width: 324px;
-          height: 55px;
-          @include between;
-          border: 1px solid gray;
-          border-radius: 5px;
-        }
-        button {
-          font-size: 21px;
-          color: white;
-          width: 324px;
-          height: 55px;
-          background-color: #24253c;
-          border-radius: 20px;
-          border: none;
-        }
-      }
     }
-    .merch:nth-of-type(2) {
-      @include mobile {
-        display: none;
-      }
-    }
-    .merch:last-of-type {
-      @include mobile {
-        display: none;
+    a {
+      color: #3f4145;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
-  .numbers {
-    @include center;
-    margin-top: 100px;
-    column-gap: 8px;
-    div:first-of-type {
-      background-color: #d9d9d9;
-    }
-    div {
-      font-size: 20px;
-      width: 40px;
-      height: 40px;
-      background: rgba(217, 217, 217, 0.5);
-      @include center;
+  iframe {
+    width: 65%;
+    height: 90%;
+    @include mobile {
+      height: 65%;
+      width: 100%;
     }
   }
 }
 footer {
   .wholefooter {
-    margin-top: 100px;
     flex-direction: column;
     background-color: #e4e4e4;
     padding: 40px 40px 26px 40px;

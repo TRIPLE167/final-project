@@ -132,52 +132,94 @@ table {
   border-spacing: 0;
 }
 
+@keyframes animacia {
+  from {
+    right: -150px;
+  }
+  to {
+    right: 0;
+  }
+}
 header {
   height: 136px;
+  display: flex;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
+  header {
+    position: relative;
+    width: 90%;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   header li,
   header input,
-  header .input,
   header img,
   header .fa-solid {
     display: none;
   }
 }
-header nav {
+header .leftheader {
+  width: 63.3%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header nav h1 {
+@media (max-width: 768px) {
+  header .leftheader {
+    width: 228px;
+  }
+}
+header .leftheader h1 {
   font-size: 35px;
   color: #ab1d46;
-  margin-right: 150px;
 }
-header nav h1 span {
+header .leftheader h1 span {
   color: #ff4c30;
 }
-header nav ul {
+header .leftheader ul {
   display: flex;
   column-gap: 31.5px;
   margin-right: 50px;
 }
-header nav ul li a {
+header .leftheader ul li a {
   color: #13264e;
   font-size: 20px;
 }
-header nav ul li a:hover {
+header .leftheader ul li a:hover {
   text-decoration: underline;
 }
-header nav .input {
+header .rightheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.9%;
+}
+@media (max-width: 768px) {
+  header .rightheader {
+    width: 16px;
+  }
+}
+header .rightheader .inputandstuff {
+  display: flex;
+  align-items: center;
+}
+header .rightheader .input {
   position: relative;
   width: 188px;
   height: 21px;
 }
-header nav .input input {
+@media (max-width: 768px) {
+  header .rightheader .input {
+    display: none;
+  }
+}
+header .rightheader .input input {
   width: 188px;
   height: 21px;
   border-radius: 40px;
@@ -186,7 +228,7 @@ header nav .input input {
   border: none;
   outline: none;
 }
-header nav .input i {
+header .rightheader .input i {
   position: absolute;
   font-size: 8px;
   right: 8px;
@@ -194,15 +236,64 @@ header nav .input i {
   transform: translatey(-50%);
 }
 header .cordination {
-  margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 14px;
 }
+header .cordination .mobilemenu label {
+  cursor: pointer;
+}
+header .cordination .mobilemenu #menu {
+  display: none;
+}
+header .cordination .mobilemenu #menu:checked ~ div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  animation: animacia 0.7s;
+  right: 0;
+}
+header .cordination .mobilemenu .telephonenav {
+  display: none;
+}
 @media (max-width: 768px) {
-  header .cordination {
-    margin: 0;
+  header .cordination .mobilemenu .telephonenav {
+    position: absolute;
+    right: -140px;
+    margin-top: 10px;
+    width: 320px;
+    height: 250px;
+    background-color: rgb(196, 192, 192);
+    display: none;
+    border-radius: 20px;
+    z-index: 1;
+  }
+}
+header .cordination .mobilemenu .telephonenav div {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .cordination .mobilemenu .telephonenav div {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .cordination .mobilemenu .telephonenav div:hover {
+    background-color: rgb(173, 171, 171);
+  }
+}
+@media (max-width: 768px) {
+  header .cordination .mobilemenu .telephonenav div a {
+    color: #465577;
+    font-size: 20px;
   }
 }
 header .cordination .lines {

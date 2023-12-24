@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kadwa&family=Kaisei+Decol&family=Kameron&family=Karla:wght@700&family=Karma&family=Kaushan+Script&family=Roboto:ital,wght@0,500;1,700;1,900&display=swap");
-
 html,
 body,
 div,
@@ -133,58 +132,94 @@ table {
   border-spacing: 0;
 }
 
+@keyframes animacia {
+  from {
+    right: -150px;
+  }
+  to {
+    right: 0;
+  }
+}
 header {
-  width: 100%;
   height: 136px;
+  display: flex;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
   header {
-    padding-inline: 15px;
+    position: relative;
+    width: 90%;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   header li,
   header input,
-  header .input,
   header img,
   header .fa-solid {
     display: none;
   }
-  header img:nth-child(4) {
-    display: block;
-  }
 }
-header nav {
+header .leftheader {
+  width: 63.3%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-header nav h1 {
+@media (max-width: 768px) {
+  header .leftheader {
+    width: 228px;
+  }
+}
+header .leftheader h1 {
   font-size: 35px;
   color: #ab1d46;
 }
-header nav h1 span {
+header .leftheader h1 span {
   color: #ff4c30;
 }
-header nav ul {
+header .leftheader ul {
   display: flex;
-  margin-left: 197px;
   column-gap: 31.5px;
   margin-right: 50px;
 }
-header nav ul li a {
+header .leftheader ul li a {
   color: #13264e;
   font-size: 20px;
 }
-header nav ul li a:hover {
+header .leftheader ul li a:hover {
   text-decoration: underline;
 }
-header nav .input {
+header .rightheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 27.9%;
+}
+@media (max-width: 768px) {
+  header .rightheader {
+    width: 16px;
+  }
+}
+header .rightheader .inputandstuff {
+  display: flex;
+  align-items: center;
+}
+header .rightheader .inputandstuff .input {
   position: relative;
   width: 188px;
   height: 21px;
 }
-header nav .input input {
+@media (max-width: 768px) {
+  header .rightheader .inputandstuff .input {
+    display: none;
+  }
+}
+header .rightheader .inputandstuff .input input {
   width: 188px;
   height: 21px;
   border-radius: 40px;
@@ -193,22 +228,73 @@ header nav .input input {
   border: none;
   outline: none;
 }
-header nav .input i {
+header .rightheader .inputandstuff .input i {
   position: absolute;
   font-size: 8px;
   right: 8px;
   top: 50%;
   transform: translatey(-50%);
 }
-header nav nav img:last-of-type {
-  display: none;
-}
 header .cordination {
-  margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 14px;
+}
+header .cordination .mobilemenu label {
+  cursor: pointer;
+}
+header .cordination .mobilemenu #menu {
+  display: none;
+}
+header .cordination .mobilemenu #menu:checked ~ div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  animation: animacia 0.7s;
+  right: 0;
+}
+header .cordination .mobilemenu .telephonenav {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .cordination .mobilemenu .telephonenav {
+    position: absolute;
+    right: -140px;
+    margin-top: 10px;
+    width: 320px;
+    height: 250px;
+    background-color: rgb(196, 192, 192);
+    display: none;
+    border-radius: 20px;
+    z-index: 1;
+  }
+}
+header .cordination .mobilemenu .telephonenav div {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .cordination .mobilemenu .telephonenav div {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .cordination .mobilemenu .telephonenav div:hover {
+    background-color: rgb(173, 171, 171);
+  }
+}
+@media (max-width: 768px) {
+  header .cordination .mobilemenu .telephonenav div a {
+    color: #465577;
+    font-size: 20px;
+  }
 }
 header .cordination .lines {
   display: none;
