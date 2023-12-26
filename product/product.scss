@@ -15,8 +15,7 @@
 header {
   height: 136px;
   display: flex;
-  align-items: center;
-  @include center;
+  justify-content: center;
   @include mobile {
     position: relative;
     width: 90%;
@@ -29,128 +28,136 @@ header {
       display: none;
     }
   }
-  .leftheader {
-    width: 63.3%;
+  nav {
     @include between;
+    width: 95%;
+
     @include mobile {
-      width: 228px;
+      @include between;
+      width: 100%;
     }
-    h1 {
-      font-size: 35px;
-      color: $strangepurple;
-      span {
-        color: $lightred;
+    .leftheader {
+      width: 70%;
+      @include between;
+      margin-right: 30px;
+      @include mobile {
+        width: 228px;
       }
-    }
-    ul {
-      display: flex;
-      column-gap: 31.5px;
-      margin-right: 50px;
-      li {
-        a {
-          color: #13264e;
-          font-size: 20px;
-          &:hover {
-            text-decoration: underline;
+      h1 {
+        font-size: 35px;
+        color: $strangepurple;
+        span {
+          color: $lightred;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        li {
+          a {
+            color: #13264e;
+            font-size: 20px;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
-    }
-  }
-  .rightheader {
-    @include between;
-    width: 27.9%;
-    @include mobile {
-      width: 16px;
     }
     .inputandstuff {
       display: flex;
       align-items: center;
-    }
-    .input {
-      position: relative;
-      width: 188px;
-      height: 21px;
-      @include mobile {
-        display: none;
-      }
-      input {
-        width: 188px;
+
+      .input {
+        position: relative;
+        width: 12.4vw;
         height: 21px;
-        border-radius: 40px;
-        padding-left: 11px;
-        background-color: #d9d9d980;
-        border: none;
-        outline: none;
-      }
-      i {
-        position: absolute;
-        font-size: 8px;
-        right: 8px;
-        top: 50%;
-        transform: translatey(-50%);
+        @include mobile {
+          display: none;
+        }
+        input {
+          width: 12.4vw;
+          height: 21px;
+          border-radius: 40px;
+          padding-left: 11px;
+          background-color: #d9d9d980;
+          border: none;
+          outline: none;
+        }
+        i {
+          position: absolute;
+          font-size: 8px;
+          right: 8px;
+          top: 50%;
+          transform: translatey(-50%);
+        }
       }
     }
-  }
-  .cordination {
-    @include center;
-    gap: 0 14px;
 
-    .mobilemenu {
-      label {
-        cursor: pointer;
-      }
-      #menu {
-        display: none;
-      }
-      #menu:checked ~ div {
-        @include center;
-        flex-direction: column;
-        row-gap: 10px;
-        animation: animacia 0.7s;
-        right: 0;
-      }
+    .cordination {
+      @include between;
+      width: 100px;
 
-      .telephonenav {
-        display: none;
-        @include mobile {
-          position: absolute;
-          right: -140px;
-          margin-top: 10px;
-          width: 320px;
-          height: 250px;
-          background-color: rgb(196, 192, 192);
-          display: none;
-          border-radius: 20px;
-          z-index: 1;
+      @include mobile {
+        width: 16px;
+      }
+      .mobilemenu {
+        label {
+          cursor: pointer;
         }
-        div {
+        #menu {
+          display: none;
+        }
+        #menu:checked ~ div {
+          @include center;
+          flex-direction: column;
+          row-gap: 10px;
+          animation: animacia 0.7s;
+          right: 0;
+        }
+
+        .telephonenav {
           display: none;
           @include mobile {
+            position: absolute;
+            right: -140px;
+            margin-top: 10px;
+            width: 320px;
+            height: 250px;
+            background-color: rgb(196, 192, 192);
             display: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 100%;
-            cursor: pointer;
-            @include center;
-            &:hover {
-              background-color: rgb(173, 171, 171);
-            }
+            border-radius: 20px;
+            z-index: 1;
           }
-
-          a {
+          div {
+            display: none;
             @include mobile {
-              color: #465577;
-              font-size: 20px;
+              display: none;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              width: 100%;
+              cursor: pointer;
+              @include center;
+              &:hover {
+                background-color: rgb(173, 171, 171);
+              }
+            }
+
+            a {
+              @include mobile {
+                color: #465577;
+                font-size: 20px;
+              }
             }
           }
         }
       }
-    }
-    .lines {
-      display: none;
-      @include mobile {
-        display: block;
+      .lines {
+        display: none;
+        @include mobile {
+          display: block;
+        }
       }
     }
   }
@@ -166,6 +173,7 @@ main {
     opacity: 80%;
 
     p {
+      text-align: center;
       color: $strangepurple;
       opacity: 100%;
       font-size: 70px;
@@ -187,6 +195,7 @@ main {
       }
     }
     h1 {
+      text-align: center;
       font-family: "Kaisei Decol", serif;
       font-size: 36px;
       margin-inline: 13px;
@@ -196,13 +205,14 @@ main {
     }
   }
   .everymerch {
-    display: flex;
+     
     flex-direction: column;
+    @include center;
     row-gap: 150px;
     .merch {
-      column-gap: 45px;
+      width: 91.5%; 
       margin-top: 82px;
-      @include center;
+      @include between;
       @include mobile {
         flex-direction: column;
         row-gap: 100px;
@@ -213,7 +223,7 @@ main {
         flex-direction: column;
         a {
           img {
-            width: 324px;
+            width: 100%;
             height: 324px;
             border-radius: 12px;
           }
@@ -225,13 +235,14 @@ main {
         }
         p {
           font-size: 23px;
+          
         }
         .quantity {
           margin-top: 21px;
           margin-bottom: 21px;
           box-sizing: border-box;
           padding-inline: 25px;
-          width: 324px;
+          width: 100%;
           height: 55px;
           @include between;
           border: 1px solid gray;
@@ -240,7 +251,7 @@ main {
         button {
           font-size: 21px;
           color: white;
-          width: 324px;
+          width: 100%;
           height: 55px;
           background-color: #24253c;
           border-radius: 20px;
@@ -276,6 +287,7 @@ main {
   }
 }
 footer {
+  position: relative;
   .wholefooter {
     margin-top: 100px;
     flex-direction: column;
@@ -314,9 +326,15 @@ footer {
           @include mobile {
             display: none;
           }
+
+          li:hover{
+            scale: 1.1;
+            transition: ease-in-out;
+            cursor: pointer;
+          }
         }
         .help {
-          width: 173.003px;
+          width: 160.003px;
 
           @include mobile {
             margin-left: 10px;
@@ -334,6 +352,12 @@ footer {
             flex-direction: column;
             row-gap: 17px;
             margin-top: 12px;
+
+            li:hover{
+              scale: 1.1;
+              transition: ease-in-out;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -347,10 +371,39 @@ footer {
         }
 
         .social {
-          text-align: end;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          row-gap: 29px;
+
+          @include mobile {
+            align-items: end;
+          }
+          img {
+            width: 30px;
+            height: 30px;
+                       
+          }
+          .tbc {
+            width: 75px;
+            height: 75px;
+            &:hover{
+              scale: 1.1;
+              transition: ease-in-out;
+              cursor: pointer;
+            }
+
+            @include mobile {
+              width: 60px;
+              height: 60px;
+              position: absolute;
+              bottom: 26px;
+              right: 40px;
+            }
+          }
         }
         .contact {
-          width: 173.003px;
+          width: 160.003px;
           hr {
             height: 1px;
             background-color: black;
@@ -365,15 +418,20 @@ footer {
             flex-direction: column;
             row-gap: 17px;
             margin-top: 12px;
+
+            li:hover{
+              scale: 1.1;
+              transition: ease-in-out;
+              cursor: pointer;
+            }
           }
         }
       }
     }
     .bottomfooter {
-      display: flex;
-      justify-content: space-between;
+      @include between;
+      width: 95%;
 
-      width: 88.3%;
       .number {
         display: flex;
         column-gap: 20px;
@@ -385,15 +443,15 @@ footer {
       }
       .footerinput {
         div {
-          display: flex;
+          width: 41.4vw;
 
+          @include between;
           input {
             width: 339px;
             height: 40px;
             padding-left: 13px;
             font-family: "Karma", serif;
             border: 1px solid #000;
-            margin-right: 38px;
             border-radius: 12px;
             @include mobile {
               display: none;
