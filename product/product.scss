@@ -102,6 +102,12 @@ header {
       @include mobile {
         width: 16px;
       }
+      img:hover{
+        scale: 1.1;
+        transition: ease-in-out;
+        cursor: pointer;
+
+      }
       .mobilemenu {
         label {
           cursor: pointer;
