@@ -18,9 +18,7 @@ header {
   justify-content: center;
   @include mobile {
     position: relative;
-    width: 90%;
-    padding-left: 40px;
-    @include between;
+    @include center;
     li,
     input,
     img,
@@ -31,10 +29,9 @@ header {
   nav {
     @include between;
     width: 95%;
-
     @include mobile {
       @include between;
-      width: 100%;
+      width: 85%;
     }
     .leftheader {
       width: 70%;
@@ -102,11 +99,10 @@ header {
       @include mobile {
         width: 16px;
       }
-      img:hover{
+      img:hover {
         scale: 1.1;
         transition: ease-in-out;
         cursor: pointer;
-
       }
       .mobilemenu {
         label {
@@ -120,7 +116,7 @@ header {
           flex-direction: column;
           row-gap: 10px;
           animation: animacia 0.7s;
-          right: 0;
+          right: 7.5%;
         }
 
         .telephonenav {
@@ -194,6 +190,12 @@ main {
     @include between;
     padding: 0 90px 0 83px;
     margin-top: 107px;
+
+    @include mobile{
+      padding: 0;
+      @include center;
+      column-gap: 30px;
+    }
   }
 
   .product {
@@ -202,7 +204,6 @@ main {
     display: flex;
     justify-content: center;
     gap: 20px;
-     
 
     @include mobile {
       flex-direction: column;
@@ -212,12 +213,11 @@ main {
       width: 45%;
       display: flex;
       flex-direction: column;
-      @include mobile{
+      @include mobile {
         width: 90%;
       }
-       
+
       .hoodie {
-        
         height: 555px;
         margin-top: 0;
       }
@@ -242,8 +242,6 @@ main {
       @include center;
       flex-direction: column;
       @include mobile {
-         
-         
         margin-top: 60px;
         width: 90%;
       }
@@ -277,6 +275,10 @@ main {
         margin-top: 50px;
         @include between;
         width: 385px;
+        @include mobile{
+          flex-direction: column;
+          row-gap: 40px;
+        }
         button {
           color: white;
           width: 324px;
@@ -301,6 +303,10 @@ footer {
     background-color: #e4e4e4;
     padding: 40px 40px 26px 40px;
     display: flex;
+
+    @include mobile {
+      padding: 20px;
+    }
     .bothside {
       display: flex;
       width: 100%;
@@ -334,7 +340,7 @@ footer {
             display: none;
           }
 
-          li:hover{
+          li:hover {
             scale: 1.1;
             transition: ease-in-out;
             cursor: pointer;
@@ -345,6 +351,7 @@ footer {
 
           @include mobile {
             margin-left: 10px;
+            max-width: 160.003px;
           }
           hr {
             height: 1px;
@@ -360,7 +367,7 @@ footer {
             row-gap: 17px;
             margin-top: 12px;
 
-            li:hover{
+            li:hover {
               scale: 1.1;
               transition: ease-in-out;
               cursor: pointer;
@@ -389,28 +396,30 @@ footer {
           img {
             width: 30px;
             height: 30px;
-                       
           }
           .tbc {
             width: 75px;
             height: 75px;
-            &:hover{
+            &:hover {
               scale: 1.1;
               transition: ease-in-out;
               cursor: pointer;
             }
 
             @include mobile {
-              width: 60px;
-              height: 60px;
+              width: 55px;
+              height: 55px;
               position: absolute;
-              bottom: 26px;
-              right: 40px;
+              bottom: 20px;
+              right: 20px;
             }
           }
         }
         .contact {
           width: 160.003px;
+          @include mobile {
+            width: 101px;
+          }
           hr {
             height: 1px;
             background-color: black;
@@ -426,7 +435,7 @@ footer {
             row-gap: 17px;
             margin-top: 12px;
 
-            li:hover{
+            li:hover {
               scale: 1.1;
               transition: ease-in-out;
               cursor: pointer;
