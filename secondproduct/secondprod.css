@@ -454,6 +454,9 @@ main .product .rightmain .heart {
     row-gap: 40px;
   }
 }
+main .product .rightmain .heart i {
+  cursor: pointer;
+}
 main .product .rightmain .heart button {
   color: white;
   width: 324px;

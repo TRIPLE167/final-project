@@ -191,7 +191,7 @@ main {
     padding: 0 90px 0 83px;
     margin-top: 107px;
 
-    @include mobile{
+    @include mobile {
       padding: 0;
       @include center;
       column-gap: 30px;
@@ -275,9 +275,12 @@ main {
         margin-top: 50px;
         @include between;
         width: 385px;
-        @include mobile{
+        @include mobile {
           flex-direction: column;
           row-gap: 40px;
+        }
+        i {
+          cursor: pointer;
         }
         button {
           color: white;
