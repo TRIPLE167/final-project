@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/thirdpage.css" />
+   
+    <title>add product</title>
+  </head>
+  <body>
+    <header>
+      <div class="containerone">
+          <div class="logo" style="margin: auto;">
+            <a href="/admin"
+              ><img src="../static/images/shape.png" alt=""
+            /></a>
+      </div>
+    </header>
+   <main>
+    <form method="POST" action="/addproduct">
+        {{form.hidden_tag()}}
+    {{form.name(placeholder="product name", class="addproduct")}}
+    {{form.photo(placeholder="path of photo", class="addproduct")}}
+    {{form.submit(class="addproduct_button")}}
+    </form>
+   </main>
+  </body>
+</html>

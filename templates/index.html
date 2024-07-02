@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/2399d5fa48.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/firstpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Food delivery</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="child_one">
+          <div class="center">
+            <img src="../static/images/logologo.png" alt="" />
+            <h1>Login</h1>
+            <p class="first_p">
+              Sign in your data that you entered during your<br />registracion
+            </p>
+            <form method="POST" action="/">
+              {{form.hidden_tag()}}
+              <div class="first">
+                <label>Email</label>
+                {{form.email(placeholder="your email")}}
+              </div>
+              <div class="second">
+                <label for="password">Password</label>
+                {{form.password(placeholder="min. 8 characters")}}
+                <i class="fa-solid fa-eye" id="eye"></i>
+              </div>
+
+              <div class="checkValid">
+                <input
+                  type="checkbox"
+                  class="ptichka"
+                  id="keep_logged_in"
+                  name="keep_logged_in"
+                />
+                <label for="keep_logged_in">Keep me logged in</label>
+              </div>
+              <div class="subClear">
+                {{ form.submit(class="login") }}
+                <a href="/register"><button id="signup" type="button">Sign up</button></a>
+              </div>
+              {% if error %}
+              <p style="color: red">{{ error }}</p>
+              {% endif %}
+              <div class="forCenter">
+                <span class="forgot">Forgot Password?</span>
+                <div class="an">
+                  <p class="second_p">
+                    Don't have an account? <span class="sign_up"><a href="/register"> Sign up</a></span>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="child_two">
+          <div class="samive">
+            <div class="up">
+              <div class="up-top">
+                <div>
+                  <h2>Overall rating</h2>
+                  <p>
+                    4.2 <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                    <span><i class="fa-solid fa-star"></i> 3 votes</span>
+                  </p>
+                </div>
+                <button>Leave review</button>
+              </div>
+              <div class="newest">
+                <p>
+                  Sort by: <span>Newest first</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </p>
+              </div>
+              <div class="savanah">
+                <img src="../static/images/woman.png" alt="" />
+                <div>
+                  <h1>Savanah miles</h1>
+                  <p>
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                    <span>10 days ago</span>
+                  </p>
+                  <h2>
+                    Lorem ipsum dolor sit amet, adhuc nulla definiebas mei ad,
+                    ei doming aperiam delicata est.
+                  </h2>
+                  <h3>
+                    <span><i class="fa-solid fa-thumbs-up"></i> 14</span
+                    ><span><i class="fa-regular fa-thumbs-down"></i> 4</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="jacob">
+                <img src="../static/images/man.png" alt="" />
+                <div>
+                  <h1>Jacob jones</h1>
+                  <p>
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                    <span>1 day ago</span>
+                  </p>
+                  <h2>
+                    Lorem ipsum dolor sit amet, adhuc nulla definiebas mei ad,
+                    ei doming aperiam delicata est.
+                  </h2>
+                  <h3>
+                    <span><i class="fa-solid fa-thumbs-up"></i> 14</span
+                    ><span><i class="fa-regular fa-thumbs-down"></i> 4</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <img src="../static/images/susshi2.png" alt="" />
+              <h1>Roll set</h1>
+              <p>
+                Ea his sensibus eleifend, mollis iudicabit omittantur id mel. Et
+                cum ignota euismod corpora, et saepe.
+              </p>
+              <div>
+                <h2>$ 22.56</h2>
+                <div><p>+</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="down">
+            <img src="../static/images/sushhi.png" alt="" />
+            <div class="down-mid">
+              <h1>Nigiri set</h1>
+              <p>
+                Ea his sensibus eleifend, mollis iudicabit omittantur id mel. Et
+                cum ignota euismod corpora, et saepe.
+              </p>
+              <h2>$ 16.80</h2>
+            </div>
+            <div class="down-end">
+              <div>
+                <div><p>-</p></div>
+                <p>1</p>
+                <div><p>+</p></div>
+              </div>
+              <button>+ Add to cart</button>
+            </div>
+          </div>
+          <div class="lastdiv">
+            <div class="lastdivchild">
+              <h2>Leave reviews for all meals</h2>
+              <p class="forreviews">
+                Lorem ipsum dolor sit amet, magna scaevola his ei. Cum te paulo
+                probatus molestiae, eirmod assentior eum ne, et omnis antiopam
+                mel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

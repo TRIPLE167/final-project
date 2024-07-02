@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/thirdpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/2399d5fa48.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ThirdPage</title>
+  </head>
+  <body>
+    <header>
+      <div class="containerone">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/secondpage"
+              ><img src="../static/images/shape.png" alt=""
+            /></a>
+            <div class="search">
+              <input type="search" id="mySearch" placeholder="search" />
+              <label for="mySearch"><div class="loopimg"></div></label>
+            </div>
+          </div>
+          <div class="square">
+            <ul>
+              <li>Restaurants</li>
+              <li class="lastone">Deals</li>
+              <div class="borderdiv"></div>
+              <li>My orders</li>
+              <div class="vector"></div>
+              <a href="../secondPage/secondPage.html">
+                <div class="girl">
+                  <img src="../static/images/img.png" alt="" />
+                </div>
+              </a>
+              <div class="verticalLine"></div>
+              <a href="../secondPage/secondPage.html"
+                ><div class="burger-icon"><i class="fa-solid fa-bars"></i></div
+              ></a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="whole">
+        <section class="first">
+          <div class="params">
+            <h1>Settings</h1>
+            <div class="methods" tabindex="0">
+              <img src="../static/images/tipi.png" />
+              <div>
+                <p>Account</p>
+                <span>personal information</span>
+              </div>
+            </div>
+            <div class="methods" tabindex="0">
+              <img src="../static/images/icon.png" />
+              <div>
+                <p>address</p>
+                <span>shippings addresses</span>
+              </div>
+            </div>
+            <div class="methods" tabindex="0">
+              <img src="../static/images/credit.png" />
+              <div>
+                <p>payment method</p>
+                <span>connected credit cards</span>
+              </div>
+            </div>
+            <div class="methods" tabindex="0">
+              <img src="../static/images/secure.png" />
+              <div>
+                <p>security</p>
+                <span>password, 2FA</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="second">
+          <form method="POST" action="/thirdpage"> 
+          {{form.hidden_tag()}}
+          <h1 class="acc">Account</h1>
+          <div class="container">
+            <div class="registration">
+              <div class="intro">
+                <h2>Personal info</h2>
+                <p>Avatar</p>
+                <div>
+                  <img src="../static/images/main avatar.png" alt="" />
+                  <button class="change" type="button"> change </button>
+                  <button type="button">Remove</button>
+                </div>
+              </div>
+              
+                <div class="up">
+                  <div>
+                    <label>First name</label>
+                    {{ form.name(placeholder=user.name, class="enabled") }}
+                  </div>
+                  <div>
+                    <label>Last name</label>
+                    {{ form.lastname(placeholder=user.lastname, class="enabled") }}
+                  </div>
+                </div>
+                <div class="down">
+                  <div>
+                    <label>Email</label>
+                    {{ form.email(placeholder=user.email, class="enabled", type="email") }}
+                  </div>
+                  <div>
+                    <label>Phone number</label>
+                    {{ form.number(placeholder=user.number, class="enabled") }}
+                  </div>
+                </div>
+          
+              <div class="notifications">
+                <h2>Email notifications</h2>
+                <div class="checkBox">
+                  <div class="left">
+                    <div>
+                      <input type="checkbox" />
+                      <label> New deals </label>
+                    </div>
+                    <div>
+                      <input type="checkbox" />
+                      <label> New restaurant </label>
+                    </div>
+                    <div>
+                      <input type="checkbox" />
+                      <label> Other statuses </label>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div>
+                      <input type="checkbox" />
+                      <label> password changes</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" />
+                      <label>special offers</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" />
+                      <label>News letter</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="/"><button type="button" id="logout">Log out</button></a>
+                <div>
+                  <button type="button">Discard changes</button>
+                  {{form.submit(class="save_changes")}}
+
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
